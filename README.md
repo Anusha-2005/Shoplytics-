@@ -1,12 +1,13 @@
 # Shoplytics — E-Commerce Sales & Customer Analytics Platform
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/API-FastAPI%20%7C%20Uvicorn-009688.svg)](https://fastapi.tiangolo.com/)
 [![Database](https://img.shields.io/badge/Database-MySQL%20%7C%20SQLite-orange.svg)](https://www.mysql.com/)
 [![BI](https://img.shields.io/badge/Power%20BI-Star%20Schema%20%2B%20DAX-yellow.svg)](https://powerbi.microsoft.com/)
-[![Tests](https://img.shields.io/badge/Tests-Pytest%20Passing-brightgreen.svg)](https://docs.pytest.org/)
+[![Tests](https://img.shields.io/badge/Tests-29%20Passing-brightgreen.svg)](https://docs.pytest.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-**Shoplytics** is an end-to-end e-commerce sales and customer analytics platform engineered using Python, Pandas, MySQL/SQL, Jupyter, Power BI, and Excel. It transforms over 1.45 million raw records from the **Olist Brazilian E-Commerce Dataset** into high-value business intelligence, automated KPI reporting, customer RFM segmentation, and root-cause logistics diagnostics.
+**Shoplytics** is an end-to-end e-commerce sales and customer analytics platform engineered using Python, Pandas, MySQL/SQL, Jupyter, Power BI, Excel, and FastAPI. It transforms over 1.45 million raw records from the **Olist Brazilian E-Commerce Dataset** into high-value business intelligence, automated KPI reporting, customer RFM segmentation, root-cause logistics diagnostics, and production-grade REST APIs.
 
 ---
 
@@ -21,7 +22,9 @@
 - [8. Analytical Domains & SQL Suite](#8-analytical-domains--sql-suite)
 - [9. Power BI Dashboard & DAX Measures](#9-power-bi-dashboard--dax-measures)
 - [10. Executive Excel Report](#10-executive-excel-report)
-- [11. Automated Testing & Reconciliation](#11-automated-testing--reconciliation)
+- [11. High-Performance REST API](#11-high-performance-rest-api)
+- [12. Automated Testing & Reconciliation](#12-automated-testing--reconciliation)
+
 
 ---
 
@@ -335,23 +338,76 @@ Generated via `python src/excel_report_generator.py` into `reports/Shoplytics_Ex
 
 ---
 
-## 11. Automated Testing & Reconciliation
+## 11. High-Performance REST API
 
-All 11 unit and data reconciliation tests are automated using `pytest`:
+The platform provides a production-grade **FastAPI** analytics server serving real-time KPIs, RFM lookups, and SQL analytics.
+
+### 11.1 Launching the API
 ```bash
-pytest tests/ -v
+# Start server with auto-reload (default: http://127.0.0.1:8000)
+python run_api.py --reload
+
+# Or directly with Uvicorn:
+uvicorn src.api.main:app --host 127.0.0.1 --port 8000 --reload
 ```
-**Test Coverage**:
-- `test_raw_dataset_files_exist`: Confirms all 9 raw files are present in the configured downloads path.
-- `test_processed_tables_exist`: Confirms all clean analytical tables exist in `data/processed/`.
-- `test_primary_key_uniqueness`: Audits zero primary key duplicates on `orders`, `customers`, `products`, `sellers`, and `rfm`.
-- `test_delivery_delay_flag_logic`: Verifies boolean accuracy of `is_delayed` against delivery and estimated dates.
-- `test_review_score_domain`: Confirms all customer review scores fall strictly in the `[1, 5]` range.
-- `test_referential_integrity_*`: Verifies zero orphaned foreign keys between orders, items, products, sellers, and customers.
-- `test_financial_reconciliation_items_vs_payments`: Reconciles item GMV against payments within tight operational tolerance.
-- `test_order_customer_cardinality`: Enforces 1-to-1 order-to-customer cardinality.
+
+Interactive Documentation:
+- **Swagger UI**: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+- **ReDoc**: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
+
+### 11.2 Endpoint Catalog
+
+| HTTP Method | Route | Description |
+| :--- | :--- | :--- |
+| `GET` | `/api/v1/health` | Database connectivity, engine type, and table row counts across star schema. |
+| `GET` | `/api/v1/analytics/kpi-summary` | Unified executive scorecard (GMV, AOV, On-Time %, CSAT, Repeat %). |
+| `POST` | `/api/v1/analytics/query` | Read-only SQL query runner with security guards against DDL/DML. |
+| `GET` | `/api/v1/sales/overview` | Macro sales numbers, merchandise revenue, freight margins, AOV. |
+| `GET` | `/api/v1/sales/monthly-trends` | Longitudinal monthly revenue, orders, and MoM growth %. |
+| `GET` | `/api/v1/sales/payment-methods` | Credit card, boleto, voucher, debit breakdown and installment stats. |
+| `GET` | `/api/v1/sales/hourly-patterns` | Peak sales revenue by day of week and hour of day. |
+| `GET` | `/api/v1/logistics/overview` | SLA on-time rate (91.89%), average lead time (12.6 days), delay duration. |
+| `GET` | `/api/v1/logistics/state-performance` | Delivery lead times and delay rates aggregated by destination state. |
+| `GET` | `/api/v1/logistics/route-comparison` | Intra-state vs Inter-state shipping comparison. |
+| `GET` | `/api/v1/customers/rfm-summary` | Customer counts and GMV across 5 RFM behavioral clusters. |
+| `GET` | `/api/v1/customers/repeat-behavior` | Retention cohorts (1-time buyers vs repeat and VIP customers). |
+| `GET` | `/api/v1/customers/state-distribution` | Unique buyers and revenue distribution by customer state. |
+| `GET` | `/api/v1/customers/segment/{segment_name}` | Paginated customer profiles within an RFM cluster (limit & offset). |
+| `GET` | `/api/v1/customers/lookup/{customer_id}` | Granular customer profile with RFM scores and historical orders. |
+| `GET` | `/api/v1/products/top-categories` | Best-selling categories by revenue, units sold, and market share. |
+| `GET` | `/api/v1/products/pareto-analysis` | 80/20 cumulative revenue concentration curve. |
+| `GET` | `/api/v1/products/weight-tiers` | Weight classes vs freight cost burden. |
+| `GET` | `/api/v1/reviews/overview` | Rating score distribution (1 to 5 stars) and seller response times. |
+| `GET` | `/api/v1/reviews/delay-impact` | Delivery delay root cause: On-time (4.29 ★) vs Delayed (2.57 ★). |
+| `GET` | `/api/v1/reviews/category-ratings` | Lowest or highest rated categories with minimum review thresholds. |
 
 ---
 
-## 12. License
+## 12. Automated Testing & Reconciliation
+
+The platform maintains a comprehensive test suite of **29 automated tests** with Pytest:
+```bash
+pytest -v
+```
+
+**Test Coverage Categories**:
+1. **Data Quality Tests (`tests/test_data_quality.py`)**:
+   - `test_raw_dataset_files_exist`: Confirms all 9 raw files are present in the downloads directory.
+   - `test_processed_tables_exist`: Confirms all clean analytical CSV tables exist in `data/processed/`.
+   - `test_primary_key_uniqueness`: Audits zero primary key duplicates across dimensions and facts.
+   - `test_delivery_delay_flag_logic`: Validates boolean accuracy of `is_delayed` calculation.
+   - `test_review_score_domain`: Confirms all customer review scores fall strictly in the `[1, 5]` range.
+
+2. **Referential Integrity & Reconciliation (`tests/test_reconciliation.py`)**:
+   - `test_referential_integrity_*`: Verifies zero orphaned foreign keys between orders, items, products, sellers, and customers.
+   - `test_financial_reconciliation_items_vs_payments`: Reconciles item GMV against payments within tight operational tolerance.
+   - `test_order_customer_cardinality`: Enforces 1-to-1 order-to-customer cardinality.
+
+3. **REST API Integration Tests (`tests/test_api.py`)**:
+   - 18 comprehensive tests verifying status codes, JSON schema models, pagination, security guards against malicious SQL, and data accuracy across all endpoints.
+
+---
+
+## 13. License
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
