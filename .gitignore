@@ -1,0 +1,48 @@
+# Environment variables & local credentials
+.env
+.env.*
+!.env.example
+
+# Raw Data & Large Files (never commit raw datasets)
+data/raw/
+*.csv
+*.zip
+*.tar.gz
+*.parquet
+
+# Processed heavy data & sqlite databases
+*.db
+*.sqlite3
+data/processed/*.csv
+data/processed/*.parquet
+!data/processed/.gitkeep
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Pytest / Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Power BI temp files
+*.pbix
+!power_bi/README.md

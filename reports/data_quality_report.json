@@ -1,0 +1,283 @@
+{
+    "dataset_directory": "C:\\Users\\anura\\Downloads",
+    "total_files": 9,
+    "files": {
+        "customers": {
+            "status": "EXISTS",
+            "filename": "olist_customers_dataset.csv",
+            "path": "C:\\Users\\anura\\Downloads\\olist_customers_dataset.csv",
+            "size_mb": 8.62,
+            "rows": 99441,
+            "columns_count": 5,
+            "columns": [
+                "customer_id",
+                "customer_unique_id",
+                "customer_zip_code_prefix",
+                "customer_city",
+                "customer_state"
+            ],
+            "dtypes": {
+                "customer_id": "object",
+                "customer_unique_id": "object",
+                "customer_zip_code_prefix": "int64",
+                "customer_city": "object",
+                "customer_state": "object"
+            },
+            "null_counts": {},
+            "null_percentage": {}
+        },
+        "geolocation": {
+            "status": "EXISTS",
+            "filename": "olist_geolocation_dataset.csv",
+            "path": "C:\\Users\\anura\\Downloads\\olist_geolocation_dataset.csv",
+            "size_mb": 58.44,
+            "rows": 1000163,
+            "columns_count": 5,
+            "columns": [
+                "geolocation_zip_code_prefix",
+                "geolocation_lat",
+                "geolocation_lng",
+                "geolocation_city",
+                "geolocation_state"
+            ],
+            "dtypes": {
+                "geolocation_zip_code_prefix": "int64",
+                "geolocation_lat": "float64",
+                "geolocation_lng": "float64",
+                "geolocation_city": "object",
+                "geolocation_state": "object"
+            },
+            "null_counts": {},
+            "null_percentage": {}
+        },
+        "order_items": {
+            "status": "EXISTS",
+            "filename": "olist_order_items_dataset.csv",
+            "path": "C:\\Users\\anura\\Downloads\\olist_order_items_dataset.csv",
+            "size_mb": 14.72,
+            "rows": 112650,
+            "columns_count": 7,
+            "columns": [
+                "order_id",
+                "order_item_id",
+                "product_id",
+                "seller_id",
+                "shipping_limit_date",
+                "price",
+                "freight_value"
+            ],
+            "dtypes": {
+                "order_id": "object",
+                "order_item_id": "int64",
+                "product_id": "object",
+                "seller_id": "object",
+                "shipping_limit_date": "object",
+                "price": "float64",
+                "freight_value": "float64"
+            },
+            "null_counts": {},
+            "null_percentage": {}
+        },
+        "order_payments": {
+            "status": "EXISTS",
+            "filename": "olist_order_payments_dataset.csv",
+            "path": "C:\\Users\\anura\\Downloads\\olist_order_payments_dataset.csv",
+            "size_mb": 5.51,
+            "rows": 103886,
+            "columns_count": 5,
+            "columns": [
+                "order_id",
+                "payment_sequential",
+                "payment_type",
+                "payment_installments",
+                "payment_value"
+            ],
+            "dtypes": {
+                "order_id": "object",
+                "payment_sequential": "int64",
+                "payment_type": "object",
+                "payment_installments": "int64",
+                "payment_value": "float64"
+            },
+            "null_counts": {},
+            "null_percentage": {}
+        },
+        "order_reviews": {
+            "status": "EXISTS",
+            "filename": "olist_order_reviews_dataset.csv",
+            "path": "C:\\Users\\anura\\Downloads\\olist_order_reviews_dataset.csv",
+            "size_mb": 13.78,
+            "rows": 99224,
+            "columns_count": 7,
+            "columns": [
+                "review_id",
+                "order_id",
+                "review_score",
+                "review_comment_title",
+                "review_comment_message",
+                "review_creation_date",
+                "review_answer_timestamp"
+            ],
+            "dtypes": {
+                "review_id": "object",
+                "order_id": "object",
+                "review_score": "int64",
+                "review_comment_title": "object",
+                "review_comment_message": "object",
+                "review_creation_date": "object",
+                "review_answer_timestamp": "object"
+            },
+            "null_counts": {
+                "review_comment_title": 87656,
+                "review_comment_message": 58247
+            },
+            "null_percentage": {
+                "review_comment_title": 88.34,
+                "review_comment_message": 58.7
+            }
+        },
+        "orders": {
+            "status": "EXISTS",
+            "filename": "olist_orders_dataset.csv",
+            "path": "C:\\Users\\anura\\Downloads\\olist_orders_dataset.csv",
+            "size_mb": 16.84,
+            "rows": 99441,
+            "columns_count": 8,
+            "columns": [
+                "order_id",
+                "customer_id",
+                "order_status",
+                "order_purchase_timestamp",
+                "order_approved_at",
+                "order_delivered_carrier_date",
+                "order_delivered_customer_date",
+                "order_estimated_delivery_date"
+            ],
+            "dtypes": {
+                "order_id": "object",
+                "customer_id": "object",
+                "order_status": "object",
+                "order_purchase_timestamp": "object",
+                "order_approved_at": "object",
+                "order_delivered_carrier_date": "object",
+                "order_delivered_customer_date": "object",
+                "order_estimated_delivery_date": "object"
+            },
+            "null_counts": {
+                "order_approved_at": 160,
+                "order_delivered_carrier_date": 1783,
+                "order_delivered_customer_date": 2965
+            },
+            "null_percentage": {
+                "order_approved_at": 0.16,
+                "order_delivered_carrier_date": 1.79,
+                "order_delivered_customer_date": 2.98
+            }
+        },
+        "products": {
+            "status": "EXISTS",
+            "filename": "olist_products_dataset.csv",
+            "path": "C:\\Users\\anura\\Downloads\\olist_products_dataset.csv",
+            "size_mb": 2.27,
+            "rows": 32951,
+            "columns_count": 9,
+            "columns": [
+                "product_id",
+                "product_category_name",
+                "product_name_lenght",
+                "product_description_lenght",
+                "product_photos_qty",
+                "product_weight_g",
+                "product_length_cm",
+                "product_height_cm",
+                "product_width_cm"
+            ],
+            "dtypes": {
+                "product_id": "object",
+                "product_category_name": "object",
+                "product_name_lenght": "float64",
+                "product_description_lenght": "float64",
+                "product_photos_qty": "float64",
+                "product_weight_g": "float64",
+                "product_length_cm": "float64",
+                "product_height_cm": "float64",
+                "product_width_cm": "float64"
+            },
+            "null_counts": {
+                "product_category_name": 610,
+                "product_name_lenght": 610,
+                "product_description_lenght": 610,
+                "product_photos_qty": 610,
+                "product_weight_g": 2,
+                "product_length_cm": 2,
+                "product_height_cm": 2,
+                "product_width_cm": 2
+            },
+            "null_percentage": {
+                "product_category_name": 1.85,
+                "product_name_lenght": 1.85,
+                "product_description_lenght": 1.85,
+                "product_photos_qty": 1.85,
+                "product_weight_g": 0.01,
+                "product_length_cm": 0.01,
+                "product_height_cm": 0.01,
+                "product_width_cm": 0.01
+            }
+        },
+        "sellers": {
+            "status": "EXISTS",
+            "filename": "olist_sellers_dataset.csv",
+            "path": "C:\\Users\\anura\\Downloads\\olist_sellers_dataset.csv",
+            "size_mb": 0.17,
+            "rows": 3095,
+            "columns_count": 4,
+            "columns": [
+                "seller_id",
+                "seller_zip_code_prefix",
+                "seller_city",
+                "seller_state"
+            ],
+            "dtypes": {
+                "seller_id": "object",
+                "seller_zip_code_prefix": "int64",
+                "seller_city": "object",
+                "seller_state": "object"
+            },
+            "null_counts": {},
+            "null_percentage": {}
+        },
+        "category_translation": {
+            "status": "EXISTS",
+            "filename": "product_category_name_translation.csv",
+            "path": "C:\\Users\\anura\\Downloads\\product_category_name_translation.csv",
+            "size_mb": 0.0,
+            "rows": 71,
+            "columns_count": 2,
+            "columns": [
+                "product_category_name",
+                "product_category_name_english"
+            ],
+            "dtypes": {
+                "product_category_name": "object",
+                "product_category_name_english": "object"
+            },
+            "null_counts": {},
+            "null_percentage": {}
+        }
+    },
+    "integrity_checks": {
+        "orders_pk_unique": true,
+        "orders_total_unique": 99441,
+        "customers_pk_unique": true,
+        "unique_customers_count": 96096,
+        "orders_to_customers_fk_valid": true,
+        "items_to_orders_fk_valid": true,
+        "items_to_products_fk_valid": true,
+        "items_to_sellers_fk_valid": true,
+        "categories_missing_translation": [
+            "pc_gamer",
+            "portateis_cozinha_e_preparadores_de_alimentos"
+        ],
+        "category_translation_coverage_pct": 97.26
+    }
+}

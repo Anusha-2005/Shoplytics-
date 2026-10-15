@@ -1,0 +1,1491 @@
+{
+    "01_sales_performance.sql": [
+        {
+            "query_index": 1,
+            "rows_returned": 1,
+            "data": [
+                {
+                    "total_orders": 96478,
+                    "total_order_entities": 96478,
+                    "total_item_revenue": 13221498.11,
+                    "total_freight_revenue": 2198275.64,
+                    "total_gross_merchandise_value": 15419773.75,
+                    "average_item_price": 119.98,
+                    "average_order_value_aov": 137.04,
+                    "freight_to_revenue_pct": 16.63
+                }
+            ]
+        },
+        {
+            "query_index": 2,
+            "rows_returned": 23,
+            "data": [
+                {
+                    "purchase_year_month": "2016-09",
+                    "monthly_orders": 1,
+                    "monthly_revenue": 134.97,
+                    "monthly_freight": 8.49,
+                    "prev_month_revenue": NaN,
+                    "mom_revenue_growth_pct": NaN
+                },
+                {
+                    "purchase_year_month": "2016-10",
+                    "monthly_orders": 265,
+                    "monthly_revenue": 40325.11,
+                    "monthly_freight": 6165.55,
+                    "prev_month_revenue": 134.97,
+                    "mom_revenue_growth_pct": 29777.09
+                },
+                {
+                    "purchase_year_month": "2016-12",
+                    "monthly_orders": 1,
+                    "monthly_revenue": 10.9,
+                    "monthly_freight": 8.72,
+                    "prev_month_revenue": 40325.11,
+                    "mom_revenue_growth_pct": -99.97
+                },
+                {
+                    "purchase_year_month": "2017-01",
+                    "monthly_orders": 750,
+                    "monthly_revenue": 111798.36,
+                    "monthly_freight": 15684.01,
+                    "prev_month_revenue": 10.9,
+                    "mom_revenue_growth_pct": 1025573.03
+                },
+                {
+                    "purchase_year_month": "2017-02",
+                    "monthly_orders": 1653,
+                    "monthly_revenue": 234223.4,
+                    "monthly_freight": 37015.92,
+                    "prev_month_revenue": 111798.36,
+                    "mom_revenue_growth_pct": 109.51
+                },
+                {
+                    "purchase_year_month": "2017-03",
+                    "monthly_orders": 2546,
+                    "monthly_revenue": 359198.85,
+                    "monthly_freight": 55132.1,
+                    "prev_month_revenue": 234223.4,
+                    "mom_revenue_growth_pct": 53.36
+                },
+                {
+                    "purchase_year_month": "2017-04",
+                    "monthly_orders": 2303,
+                    "monthly_revenue": 340669.68,
+                    "monthly_freight": 50142.72,
+                    "prev_month_revenue": 359198.85,
+                    "mom_revenue_growth_pct": -5.16
+                },
+                {
+                    "purchase_year_month": "2017-05",
+                    "monthly_orders": 3546,
+                    "monthly_revenue": 489338.25,
+                    "monthly_freight": 77513.15,
+                    "prev_month_revenue": 340669.68,
+                    "mom_revenue_growth_pct": 43.64
+                },
+                {
+                    "purchase_year_month": "2017-06",
+                    "monthly_orders": 3135,
+                    "monthly_revenue": 421923.37,
+                    "monthly_freight": 68127.0,
+                    "prev_month_revenue": 489338.25,
+                    "mom_revenue_growth_pct": -13.78
+                },
+                {
+                    "purchase_year_month": "2017-07",
+                    "monthly_orders": 3872,
+                    "monthly_revenue": 481604.52,
+                    "monthly_freight": 84694.56,
+                    "prev_month_revenue": 421923.37,
+                    "mom_revenue_growth_pct": 14.15
+                },
+                {
+                    "purchase_year_month": "2017-08",
+                    "monthly_orders": 4193,
+                    "monthly_revenue": 554699.7,
+                    "monthly_freight": 91132.66,
+                    "prev_month_revenue": 481604.52,
+                    "mom_revenue_growth_pct": 15.18
+                },
+                {
+                    "purchase_year_month": "2017-09",
+                    "monthly_orders": 4150,
+                    "monthly_revenue": 607399.67,
+                    "monthly_freight": 93677.82,
+                    "prev_month_revenue": 554699.7,
+                    "mom_revenue_growth_pct": 9.5
+                },
+                {
+                    "purchase_year_month": "2017-10",
+                    "monthly_orders": 4478,
+                    "monthly_revenue": 648247.65,
+                    "monthly_freight": 102869.36,
+                    "prev_month_revenue": 607399.67,
+                    "mom_revenue_growth_pct": 6.73
+                },
+                {
+                    "purchase_year_month": "2017-11",
+                    "monthly_orders": 7289,
+                    "monthly_revenue": 987765.37,
+                    "monthly_freight": 165598.83,
+                    "prev_month_revenue": 648247.65,
+                    "mom_revenue_growth_pct": 52.37
+                },
+                {
+                    "purchase_year_month": "2017-12",
+                    "monthly_orders": 5513,
+                    "monthly_revenue": 726033.19,
+                    "monthly_freight": 117045.1,
+                    "prev_month_revenue": 987765.37,
+                    "mom_revenue_growth_pct": -26.5
+                },
+                {
+                    "purchase_year_month": "2018-01",
+                    "monthly_orders": 7069,
+                    "monthly_revenue": 924645.0,
+                    "monthly_freight": 153242.46,
+                    "prev_month_revenue": 726033.19,
+                    "mom_revenue_growth_pct": 27.36
+                },
+                {
+                    "purchase_year_month": "2018-02",
+                    "monthly_orders": 6555,
+                    "monthly_revenue": 826437.13,
+                    "monthly_freight": 139731.28,
+                    "prev_month_revenue": 924645.0,
+                    "mom_revenue_growth_pct": -10.62
+                },
+                {
+                    "purchase_year_month": "2018-03",
+                    "monthly_orders": 7003,
+                    "monthly_revenue": 953356.25,
+                    "monthly_freight": 167241.99,
+                    "prev_month_revenue": 826437.13,
+                    "mom_revenue_growth_pct": 15.36
+                },
+                {
+                    "purchase_year_month": "2018-04",
+                    "monthly_orders": 6798,
+                    "monthly_revenue": 973534.09,
+                    "monthly_freight": 159344.84,
+                    "prev_month_revenue": 953356.25,
+                    "mom_revenue_growth_pct": 2.12
+                },
+                {
+                    "purchase_year_month": "2018-05",
+                    "monthly_orders": 6749,
+                    "monthly_revenue": 977544.69,
+                    "monthly_freight": 151229.83,
+                    "prev_month_revenue": 973534.09,
+                    "mom_revenue_growth_pct": 0.41
+                },
+                {
+                    "purchase_year_month": "2018-06",
+                    "monthly_orders": 6099,
+                    "monthly_revenue": 856077.86,
+                    "monthly_freight": 155900.43,
+                    "prev_month_revenue": 977544.69,
+                    "mom_revenue_growth_pct": -12.43
+                },
+                {
+                    "purchase_year_month": "2018-07",
+                    "monthly_orders": 6159,
+                    "monthly_revenue": 867953.46,
+                    "monthly_freight": 159853.82,
+                    "prev_month_revenue": 856077.86,
+                    "mom_revenue_growth_pct": 1.39
+                },
+                {
+                    "purchase_year_month": "2018-08",
+                    "monthly_orders": 6351,
+                    "monthly_revenue": 838576.64,
+                    "monthly_freight": 146915.0,
+                    "prev_month_revenue": 867953.46,
+                    "mom_revenue_growth_pct": -3.38
+                }
+            ]
+        },
+        {
+            "query_index": 3,
+            "rows_returned": 5,
+            "data": [
+                {
+                    "payment_type": "Credit Card",
+                    "total_orders": 76505,
+                    "total_payment_value": 12542084.19,
+                    "average_ticket_size": 163.32,
+                    "avg_installments": 3.5,
+                    "max_installments": 24,
+                    "pct_of_total_volume": 78.34
+                },
+                {
+                    "payment_type": "Boleto",
+                    "total_orders": 19784,
+                    "total_payment_value": 2869361.27,
+                    "average_ticket_size": 145.03,
+                    "avg_installments": 1.0,
+                    "max_installments": 1,
+                    "pct_of_total_volume": 17.92
+                },
+                {
+                    "payment_type": "Voucher",
+                    "total_orders": 3866,
+                    "total_payment_value": 379436.87,
+                    "average_ticket_size": 65.7,
+                    "avg_installments": 1.0,
+                    "max_installments": 1,
+                    "pct_of_total_volume": 2.37
+                },
+                {
+                    "payment_type": "Debit Card",
+                    "total_orders": 1528,
+                    "total_payment_value": 217989.79,
+                    "average_ticket_size": 142.57,
+                    "avg_installments": 1.0,
+                    "max_installments": 1,
+                    "pct_of_total_volume": 1.36
+                },
+                {
+                    "payment_type": "Not Defined",
+                    "total_orders": 3,
+                    "total_payment_value": 0.0,
+                    "average_ticket_size": 0.0,
+                    "avg_installments": 1.0,
+                    "max_installments": 1,
+                    "pct_of_total_volume": 0.0
+                }
+            ]
+        },
+        {
+            "query_index": 4,
+            "rows_returned": 20,
+            "data": [
+                {
+                    "purchase_day_name": "Tuesday",
+                    "purchase_hour": 14,
+                    "orders_count": 1095,
+                    "total_revenue": 155143.12
+                },
+                {
+                    "purchase_day_name": "Monday",
+                    "purchase_hour": 14,
+                    "orders_count": 1063,
+                    "total_revenue": 151457.08
+                },
+                {
+                    "purchase_day_name": "Friday",
+                    "purchase_hour": 16,
+                    "orders_count": 943,
+                    "total_revenue": 150934.53
+                },
+                {
+                    "purchase_day_name": "Monday",
+                    "purchase_hour": 21,
+                    "orders_count": 1083,
+                    "total_revenue": 150683.31
+                },
+                {
+                    "purchase_day_name": "Wednesday",
+                    "purchase_hour": 14,
+                    "orders_count": 1027,
+                    "total_revenue": 150341.72
+                },
+                {
+                    "purchase_day_name": "Wednesday",
+                    "purchase_hour": 16,
+                    "orders_count": 1008,
+                    "total_revenue": 147785.81
+                },
+                {
+                    "purchase_day_name": "Monday",
+                    "purchase_hour": 15,
+                    "orders_count": 1047,
+                    "total_revenue": 145235.97
+                },
+                {
+                    "purchase_day_name": "Tuesday",
+                    "purchase_hour": 16,
+                    "orders_count": 1059,
+                    "total_revenue": 145231.76
+                },
+                {
+                    "purchase_day_name": "Monday",
+                    "purchase_hour": 11,
+                    "orders_count": 1052,
+                    "total_revenue": 144266.35
+                },
+                {
+                    "purchase_day_name": "Monday",
+                    "purchase_hour": 22,
+                    "orders_count": 962,
+                    "total_revenue": 143612.78
+                },
+                {
+                    "purchase_day_name": "Thursday",
+                    "purchase_hour": 16,
+                    "orders_count": 1042,
+                    "total_revenue": 143355.11
+                },
+                {
+                    "purchase_day_name": "Monday",
+                    "purchase_hour": 16,
+                    "orders_count": 1060,
+                    "total_revenue": 142980.53
+                },
+                {
+                    "purchase_day_name": "Friday",
+                    "purchase_hour": 15,
+                    "orders_count": 948,
+                    "total_revenue": 140086.28
+                },
+                {
+                    "purchase_day_name": "Monday",
+                    "purchase_hour": 20,
+                    "orders_count": 998,
+                    "total_revenue": 138842.53
+                },
+                {
+                    "purchase_day_name": "Friday",
+                    "purchase_hour": 14,
+                    "orders_count": 937,
+                    "total_revenue": 138701.62
+                },
+                {
+                    "purchase_day_name": "Wednesday",
+                    "purchase_hour": 11,
+                    "orders_count": 1030,
+                    "total_revenue": 138609.9
+                },
+                {
+                    "purchase_day_name": "Wednesday",
+                    "purchase_hour": 10,
+                    "orders_count": 1007,
+                    "total_revenue": 138372.43
+                },
+                {
+                    "purchase_day_name": "Tuesday",
+                    "purchase_hour": 13,
+                    "orders_count": 1011,
+                    "total_revenue": 137867.29
+                },
+                {
+                    "purchase_day_name": "Tuesday",
+                    "purchase_hour": 20,
+                    "orders_count": 946,
+                    "total_revenue": 136955.4
+                },
+                {
+                    "purchase_day_name": "Tuesday",
+                    "purchase_hour": 11,
+                    "orders_count": 1023,
+                    "total_revenue": 136118.84
+                }
+            ]
+        }
+    ],
+    "02_product_analytics.sql": [
+        {
+            "query_index": 1,
+            "rows_returned": 15,
+            "data": [
+                {
+                    "category": "Health Beauty",
+                    "total_orders": 8647,
+                    "units_sold": 9465,
+                    "total_revenue": 1233131.72,
+                    "total_freight": 178957.81,
+                    "avg_unit_price": 130.28,
+                    "revenue_market_share_pct": 9.07
+                },
+                {
+                    "category": "Watches Gifts",
+                    "total_orders": 5495,
+                    "units_sold": 5859,
+                    "total_revenue": 1166176.98,
+                    "total_freight": 98156.14,
+                    "avg_unit_price": 199.04,
+                    "revenue_market_share_pct": 8.58
+                },
+                {
+                    "category": "Bed Bath Table",
+                    "total_orders": 9272,
+                    "units_sold": 10953,
+                    "total_revenue": 1023434.76,
+                    "total_freight": 201774.5,
+                    "avg_unit_price": 93.44,
+                    "revenue_market_share_pct": 7.53
+                },
+                {
+                    "category": "Sports Leisure",
+                    "total_orders": 7530,
+                    "units_sold": 8431,
+                    "total_revenue": 954852.55,
+                    "total_freight": 163404.36,
+                    "avg_unit_price": 113.25,
+                    "revenue_market_share_pct": 7.03
+                },
+                {
+                    "category": "Computers Accessories",
+                    "total_orders": 6530,
+                    "units_sold": 7644,
+                    "total_revenue": 888724.61,
+                    "total_freight": 143999.16,
+                    "avg_unit_price": 116.26,
+                    "revenue_market_share_pct": 6.54
+                },
+                {
+                    "category": "Furniture Decor",
+                    "total_orders": 6307,
+                    "units_sold": 8160,
+                    "total_revenue": 711927.69,
+                    "total_freight": 168402.23,
+                    "avg_unit_price": 87.25,
+                    "revenue_market_share_pct": 5.24
+                },
+                {
+                    "category": "Housewares",
+                    "total_orders": 5743,
+                    "units_sold": 6795,
+                    "total_revenue": 615628.69,
+                    "total_freight": 142763.56,
+                    "avg_unit_price": 90.6,
+                    "revenue_market_share_pct": 4.53
+                },
+                {
+                    "category": "Cool Stuff",
+                    "total_orders": 3559,
+                    "units_sold": 3718,
+                    "total_revenue": 610204.1,
+                    "total_freight": 81476.79,
+                    "avg_unit_price": 164.12,
+                    "revenue_market_share_pct": 4.49
+                },
+                {
+                    "category": "Auto",
+                    "total_orders": 3810,
+                    "units_sold": 4140,
+                    "total_revenue": 578966.65,
+                    "total_freight": 90488.1,
+                    "avg_unit_price": 139.85,
+                    "revenue_market_share_pct": 4.26
+                },
+                {
+                    "category": "Toys",
+                    "total_orders": 3804,
+                    "units_sold": 4030,
+                    "total_revenue": 471286.48,
+                    "total_freight": 75774.58,
+                    "avg_unit_price": 116.94,
+                    "revenue_market_share_pct": 3.47
+                },
+                {
+                    "category": "Garden Tools",
+                    "total_orders": 3448,
+                    "units_sold": 4268,
+                    "total_revenue": 470495.28,
+                    "total_freight": 96650.4,
+                    "avg_unit_price": 110.24,
+                    "revenue_market_share_pct": 3.46
+                },
+                {
+                    "category": "Baby",
+                    "total_orders": 2809,
+                    "units_sold": 2982,
+                    "total_revenue": 400421.84,
+                    "total_freight": 66305.81,
+                    "avg_unit_price": 134.28,
+                    "revenue_market_share_pct": 2.95
+                },
+                {
+                    "category": "Perfumery",
+                    "total_orders": 3086,
+                    "units_sold": 3340,
+                    "total_revenue": 390144.65,
+                    "total_freight": 53026.98,
+                    "avg_unit_price": 116.81,
+                    "revenue_market_share_pct": 2.87
+                },
+                {
+                    "category": "Telephony",
+                    "total_orders": 4093,
+                    "units_sold": 4430,
+                    "total_revenue": 309860.23,
+                    "total_freight": 69342.39,
+                    "avg_unit_price": 69.95,
+                    "revenue_market_share_pct": 2.28
+                },
+                {
+                    "category": "Office Furniture",
+                    "total_orders": 1254,
+                    "units_sold": 1668,
+                    "total_revenue": 268154.31,
+                    "total_freight": 67057.05,
+                    "avg_unit_price": 160.76,
+                    "revenue_market_share_pct": 1.97
+                }
+            ]
+        },
+        {
+            "query_index": 2,
+            "rows_returned": 20,
+            "data": [
+                {
+                    "category": "Health Beauty",
+                    "category_revenue": 1233131.72,
+                    "cumulative_revenue": 1233131.72,
+                    "cumulative_percentage": 9.33
+                },
+                {
+                    "category": "Watches Gifts",
+                    "category_revenue": 1166176.98,
+                    "cumulative_revenue": 2399308.7,
+                    "cumulative_percentage": 18.15
+                },
+                {
+                    "category": "Bed Bath Table",
+                    "category_revenue": 1023434.76,
+                    "cumulative_revenue": 3422743.46,
+                    "cumulative_percentage": 25.89
+                },
+                {
+                    "category": "Sports Leisure",
+                    "category_revenue": 954852.55,
+                    "cumulative_revenue": 4377596.01,
+                    "cumulative_percentage": 33.11
+                },
+                {
+                    "category": "Computers Accessories",
+                    "category_revenue": 888724.61,
+                    "cumulative_revenue": 5266320.62,
+                    "cumulative_percentage": 39.83
+                },
+                {
+                    "category": "Furniture Decor",
+                    "category_revenue": 711927.69,
+                    "cumulative_revenue": 5978248.31,
+                    "cumulative_percentage": 45.22
+                },
+                {
+                    "category": "Housewares",
+                    "category_revenue": 615628.69,
+                    "cumulative_revenue": 6593877.0,
+                    "cumulative_percentage": 49.87
+                },
+                {
+                    "category": "Cool Stuff",
+                    "category_revenue": 610204.1,
+                    "cumulative_revenue": 7204081.1,
+                    "cumulative_percentage": 54.49
+                },
+                {
+                    "category": "Auto",
+                    "category_revenue": 578966.65,
+                    "cumulative_revenue": 7783047.75,
+                    "cumulative_percentage": 58.87
+                },
+                {
+                    "category": "Toys",
+                    "category_revenue": 471286.48,
+                    "cumulative_revenue": 8254334.23,
+                    "cumulative_percentage": 62.43
+                },
+                {
+                    "category": "Garden Tools",
+                    "category_revenue": 470495.28,
+                    "cumulative_revenue": 8724829.51,
+                    "cumulative_percentage": 65.99
+                },
+                {
+                    "category": "Baby",
+                    "category_revenue": 400421.84,
+                    "cumulative_revenue": 9125251.35,
+                    "cumulative_percentage": 69.02
+                },
+                {
+                    "category": "Perfumery",
+                    "category_revenue": 390144.65,
+                    "cumulative_revenue": 9515396.0,
+                    "cumulative_percentage": 71.97
+                },
+                {
+                    "category": "Telephony",
+                    "category_revenue": 309860.23,
+                    "cumulative_revenue": 9825256.23,
+                    "cumulative_percentage": 74.31
+                },
+                {
+                    "category": "Office Furniture",
+                    "category_revenue": 268154.31,
+                    "cumulative_revenue": 10093410.54,
+                    "cumulative_percentage": 76.34
+                },
+                {
+                    "category": "Stationery",
+                    "category_revenue": 223788.69,
+                    "cumulative_revenue": 10317199.23,
+                    "cumulative_percentage": 78.03
+                },
+                {
+                    "category": "Computers",
+                    "category_revenue": 218684.14,
+                    "cumulative_revenue": 10535883.37,
+                    "cumulative_percentage": 79.69
+                },
+                {
+                    "category": "Pet Shop",
+                    "category_revenue": 211695.64,
+                    "cumulative_revenue": 10747579.01,
+                    "cumulative_percentage": 81.29
+                },
+                {
+                    "category": "Musical Instruments",
+                    "category_revenue": 184315.74,
+                    "cumulative_revenue": 10931894.75,
+                    "cumulative_percentage": 82.68
+                },
+                {
+                    "category": "Small Appliances",
+                    "category_revenue": 182754.12,
+                    "cumulative_revenue": 11114648.87,
+                    "cumulative_percentage": 84.06
+                }
+            ]
+        },
+        {
+            "query_index": 3,
+            "rows_returned": 4,
+            "data": [
+                {
+                    "weight_tier": "1. Light (<0.5 kg)",
+                    "items_shipped": 44790,
+                    "avg_item_price": 75.36,
+                    "avg_freight_charge": 15.2,
+                    "avg_freight_to_price_ratio_pct": 41.92
+                },
+                {
+                    "weight_tier": "2. Medium (0.5 - 2 kg)",
+                    "items_shipped": 42524,
+                    "avg_item_price": 112.82,
+                    "avg_freight_charge": 17.8,
+                    "avg_freight_to_price_ratio_pct": 27.07
+                },
+                {
+                    "weight_tier": "3. Heavy (2 - 5 kg)",
+                    "items_shipped": 11444,
+                    "avg_item_price": 180.58,
+                    "avg_freight_charge": 22.83,
+                    "avg_freight_to_price_ratio_pct": 20.7
+                },
+                {
+                    "weight_tier": "4. Bulky (>5 kg)",
+                    "items_shipped": 13892,
+                    "avg_item_price": 241.3,
+                    "avg_freight_charge": 39.81,
+                    "avg_freight_to_price_ratio_pct": 25.12
+                }
+            ]
+        }
+    ],
+    "03_customer_segmentation.sql": [
+        {
+            "query_index": 1,
+            "rows_returned": 5,
+            "data": [
+                {
+                    "customer_segment": "Champions & Loyal",
+                    "total_customers": 23491,
+                    "pct_of_customers": 25.16,
+                    "segment_total_spend": 3454692.47,
+                    "avg_monetary_spend": 147.06,
+                    "avg_recency_days": 112.2,
+                    "avg_frequency": 1.08
+                },
+                {
+                    "customer_segment": "Promising Recent",
+                    "total_customers": 23356,
+                    "pct_of_customers": 25.02,
+                    "segment_total_spend": 3212046.77,
+                    "avg_monetary_spend": 137.53,
+                    "avg_recency_days": 112.1,
+                    "avg_frequency": 1.0
+                },
+                {
+                    "customer_segment": "Hibernating / Lost",
+                    "total_customers": 17563,
+                    "pct_of_customers": 18.81,
+                    "segment_total_spend": 2453144.65,
+                    "avg_monetary_spend": 139.68,
+                    "avg_recency_days": 394.1,
+                    "avg_frequency": 1.0
+                },
+                {
+                    "customer_segment": "Needs Attention",
+                    "total_customers": 17437,
+                    "pct_of_customers": 18.68,
+                    "segment_total_spend": 2440029.32,
+                    "avg_monetary_spend": 139.93,
+                    "avg_recency_days": 277.4,
+                    "avg_frequency": 1.04
+                },
+                {
+                    "customer_segment": "At Risk High Value",
+                    "total_customers": 11511,
+                    "pct_of_customers": 12.33,
+                    "segment_total_spend": 1661584.9,
+                    "avg_monetary_spend": 144.35,
+                    "avg_recency_days": 451.9,
+                    "avg_frequency": 1.05
+                }
+            ]
+        },
+        {
+            "query_index": 2,
+            "rows_returned": 4,
+            "data": [
+                {
+                    "buyer_cohort": "1. One-Time Buyer",
+                    "customer_count": 90557,
+                    "pct_customers": 97.0,
+                    "cohort_revenue": 12493089.36,
+                    "avg_customer_lifetime_value": 137.96
+                },
+                {
+                    "buyer_cohort": "2. Repeat Buyer (2 Orders)",
+                    "customer_count": 2573,
+                    "pct_customers": 2.76,
+                    "cohort_revenue": 631274.9,
+                    "avg_customer_lifetime_value": 245.35
+                },
+                {
+                    "buyer_cohort": "3. Frequent Buyer (3-5 Orders)",
+                    "customer_count": 218,
+                    "pct_customers": 0.23,
+                    "cohort_revenue": 90537.69,
+                    "avg_customer_lifetime_value": 415.31
+                },
+                {
+                    "buyer_cohort": "4. Power VIP Buyer (>5 Orders)",
+                    "customer_count": 10,
+                    "pct_customers": 0.01,
+                    "cohort_revenue": 6596.16,
+                    "avg_customer_lifetime_value": 659.62
+                }
+            ]
+        },
+        {
+            "query_index": 3,
+            "rows_returned": 27,
+            "data": [
+                {
+                    "customer_state": "SP",
+                    "unique_customers": 39156,
+                    "orders_count": 40501,
+                    "state_merchandise_revenue": 5067633.16,
+                    "avg_item_price": 109.1,
+                    "avg_state_delivery_days": 8.7
+                },
+                {
+                    "customer_state": "RJ",
+                    "unique_customers": 11917,
+                    "orders_count": 12350,
+                    "state_merchandise_revenue": 1759651.13,
+                    "avg_item_price": 124.42,
+                    "avg_state_delivery_days": 15.1
+                },
+                {
+                    "customer_state": "MG",
+                    "unique_customers": 11001,
+                    "orders_count": 11354,
+                    "state_merchandise_revenue": 1552481.83,
+                    "avg_item_price": 120.2,
+                    "avg_state_delivery_days": 12.0
+                },
+                {
+                    "customer_state": "RS",
+                    "unique_customers": 5168,
+                    "orders_count": 5345,
+                    "state_merchandise_revenue": 728897.47,
+                    "avg_item_price": 118.83,
+                    "avg_state_delivery_days": 15.2
+                },
+                {
+                    "customer_state": "PR",
+                    "unique_customers": 4769,
+                    "orders_count": 4923,
+                    "state_merchandise_revenue": 666063.51,
+                    "avg_item_price": 117.91,
+                    "avg_state_delivery_days": 11.9
+                },
+                {
+                    "customer_state": "SC",
+                    "unique_customers": 3449,
+                    "orders_count": 3546,
+                    "state_merchandise_revenue": 507012.13,
+                    "avg_item_price": 123.75,
+                    "avg_state_delivery_days": 15.0
+                },
+                {
+                    "customer_state": "BA",
+                    "unique_customers": 3158,
+                    "orders_count": 3256,
+                    "state_merchandise_revenue": 493584.14,
+                    "avg_item_price": 134.02,
+                    "avg_state_delivery_days": 19.2
+                },
+                {
+                    "customer_state": "DF",
+                    "unique_customers": 2019,
+                    "orders_count": 2080,
+                    "state_merchandise_revenue": 296498.41,
+                    "avg_item_price": 125.9,
+                    "avg_state_delivery_days": 13.0
+                },
+                {
+                    "customer_state": "GO",
+                    "unique_customers": 1895,
+                    "orders_count": 1957,
+                    "state_merchandise_revenue": 282836.7,
+                    "avg_item_price": 124.21,
+                    "avg_state_delivery_days": 15.4
+                },
+                {
+                    "customer_state": "ES",
+                    "unique_customers": 1928,
+                    "orders_count": 1995,
+                    "state_merchandise_revenue": 268643.45,
+                    "avg_item_price": 120.74,
+                    "avg_state_delivery_days": 15.6
+                },
+                {
+                    "customer_state": "PE",
+                    "unique_customers": 1551,
+                    "orders_count": 1593,
+                    "state_merchandise_revenue": 251889.49,
+                    "avg_item_price": 144.27,
+                    "avg_state_delivery_days": 18.3
+                },
+                {
+                    "customer_state": "CE",
+                    "unique_customers": 1258,
+                    "orders_count": 1279,
+                    "state_merchandise_revenue": 219757.38,
+                    "avg_item_price": 154.11,
+                    "avg_state_delivery_days": 21.0
+                },
+                {
+                    "customer_state": "PA",
+                    "unique_customers": 922,
+                    "orders_count": 946,
+                    "state_merchandise_revenue": 174470.59,
+                    "avg_item_price": 165.53,
+                    "avg_state_delivery_days": 23.8
+                },
+                {
+                    "customer_state": "MT",
+                    "unique_customers": 856,
+                    "orders_count": 886,
+                    "state_merchandise_revenue": 152191.62,
+                    "avg_item_price": 146.76,
+                    "avg_state_delivery_days": 18.0
+                },
+                {
+                    "customer_state": "MA",
+                    "unique_customers": 700,
+                    "orders_count": 717,
+                    "state_merchandise_revenue": 117009.38,
+                    "avg_item_price": 146.26,
+                    "avg_state_delivery_days": 21.6
+                },
+                {
+                    "customer_state": "MS",
+                    "unique_customers": 681,
+                    "orders_count": 701,
+                    "state_merchandise_revenue": 115429.97,
+                    "avg_item_price": 142.33,
+                    "avg_state_delivery_days": 15.5
+                },
+                {
+                    "customer_state": "PB",
+                    "unique_customers": 504,
+                    "orders_count": 517,
+                    "state_merchandise_revenue": 112586.82,
+                    "avg_item_price": 192.13,
+                    "avg_state_delivery_days": 20.6
+                },
+                {
+                    "customer_state": "PI",
+                    "unique_customers": 464,
+                    "orders_count": 476,
+                    "state_merchandise_revenue": 84721.0,
+                    "avg_item_price": 161.99,
+                    "avg_state_delivery_days": 19.4
+                },
+                {
+                    "customer_state": "RN",
+                    "unique_customers": 464,
+                    "orders_count": 474,
+                    "state_merchandise_revenue": 82105.66,
+                    "avg_item_price": 157.59,
+                    "avg_state_delivery_days": 19.3
+                },
+                {
+                    "customer_state": "AL",
+                    "unique_customers": 387,
+                    "orders_count": 397,
+                    "state_merchandise_revenue": 78855.72,
+                    "avg_item_price": 184.67,
+                    "avg_state_delivery_days": 24.5
+                },
+                {
+                    "customer_state": "SE",
+                    "unique_customers": 329,
+                    "orders_count": 335,
+                    "state_merchandise_revenue": 56574.19,
+                    "avg_item_price": 150.86,
+                    "avg_state_delivery_days": 21.5
+                },
+                {
+                    "customer_state": "TO",
+                    "unique_customers": 267,
+                    "orders_count": 274,
+                    "state_merchandise_revenue": 48402.51,
+                    "avg_item_price": 156.14,
+                    "avg_state_delivery_days": 17.4
+                },
+                {
+                    "customer_state": "RO",
+                    "unique_customers": 231,
+                    "orders_count": 243,
+                    "state_merchandise_revenue": 45682.76,
+                    "avg_item_price": 167.34,
+                    "avg_state_delivery_days": 19.7
+                },
+                {
+                    "customer_state": "AM",
+                    "unique_customers": 140,
+                    "orders_count": 145,
+                    "state_merchandise_revenue": 22155.84,
+                    "avg_item_price": 135.93,
+                    "avg_state_delivery_days": 26.4
+                },
+                {
+                    "customer_state": "AC",
+                    "unique_customers": 76,
+                    "orders_count": 80,
+                    "state_merchandise_revenue": 15930.97,
+                    "avg_item_price": 175.07,
+                    "avg_state_delivery_days": 20.7
+                },
+                {
+                    "customer_state": "AP",
+                    "unique_customers": 66,
+                    "orders_count": 67,
+                    "state_merchandise_revenue": 13374.81,
+                    "avg_item_price": 165.12,
+                    "avg_state_delivery_days": 28.2
+                },
+                {
+                    "customer_state": "RR",
+                    "unique_customers": 40,
+                    "orders_count": 41,
+                    "state_merchandise_revenue": 7057.47,
+                    "avg_item_price": 153.42,
+                    "avg_state_delivery_days": 28.2
+                }
+            ]
+        }
+    ],
+    "04_delivery_logistics.sql": [
+        {
+            "query_index": 1,
+            "rows_returned": 1,
+            "data": [
+                {
+                    "total_delivered_orders": 96470,
+                    "on_time_orders": 88644,
+                    "delayed_orders": 7826,
+                    "on_time_delivery_rate_pct": 91.89,
+                    "delay_rate_pct": 8.11,
+                    "avg_actual_delivery_days": 12.6,
+                    "avg_estimated_delivery_days": 23.7,
+                    "avg_days_late_when_delayed": 9.6
+                }
+            ]
+        },
+        {
+            "query_index": 2,
+            "rows_returned": 27,
+            "data": [
+                {
+                    "customer_state": "RR",
+                    "delivered_orders": 46,
+                    "avg_delivery_days": 28.2,
+                    "avg_estimated_days": 45.8,
+                    "delayed_shipments": 5,
+                    "state_delay_rate_pct": 10.87,
+                    "avg_freight_cost": 43.09
+                },
+                {
+                    "customer_state": "AP",
+                    "delivered_orders": 81,
+                    "avg_delivery_days": 28.2,
+                    "avg_estimated_days": 46.0,
+                    "delayed_shipments": 4,
+                    "state_delay_rate_pct": 4.94,
+                    "avg_freight_cost": 34.16
+                },
+                {
+                    "customer_state": "AM",
+                    "delivered_orders": 163,
+                    "avg_delivery_days": 26.4,
+                    "avg_estimated_days": 45.6,
+                    "delayed_shipments": 7,
+                    "state_delay_rate_pct": 4.29,
+                    "avg_freight_cost": 33.31
+                },
+                {
+                    "customer_state": "AL",
+                    "delivered_orders": 427,
+                    "avg_delivery_days": 24.5,
+                    "avg_estimated_days": 32.5,
+                    "delayed_shipments": 103,
+                    "state_delay_rate_pct": 24.12,
+                    "avg_freight_cost": 35.87
+                },
+                {
+                    "customer_state": "PA",
+                    "delivered_orders": 1054,
+                    "avg_delivery_days": 23.8,
+                    "avg_estimated_days": 37.3,
+                    "delayed_shipments": 131,
+                    "state_delay_rate_pct": 12.43,
+                    "avg_freight_cost": 35.63
+                },
+                {
+                    "customer_state": "MA",
+                    "delivered_orders": 800,
+                    "avg_delivery_days": 21.6,
+                    "avg_estimated_days": 30.9,
+                    "delayed_shipments": 163,
+                    "state_delay_rate_pct": 20.38,
+                    "avg_freight_cost": 38.49
+                },
+                {
+                    "customer_state": "SE",
+                    "delivered_orders": 375,
+                    "avg_delivery_days": 21.5,
+                    "avg_estimated_days": 30.8,
+                    "delayed_shipments": 61,
+                    "state_delay_rate_pct": 16.27,
+                    "avg_freight_cost": 36.57
+                },
+                {
+                    "customer_state": "CE",
+                    "delivered_orders": 1426,
+                    "avg_delivery_days": 21.0,
+                    "avg_estimated_days": 31.4,
+                    "delayed_shipments": 218,
+                    "state_delay_rate_pct": 15.29,
+                    "avg_freight_cost": 32.73
+                },
+                {
+                    "customer_state": "AC",
+                    "delivered_orders": 91,
+                    "avg_delivery_days": 20.7,
+                    "avg_estimated_days": 41.0,
+                    "delayed_shipments": 3,
+                    "state_delay_rate_pct": 3.3,
+                    "avg_freight_cost": 40.05
+                },
+                {
+                    "customer_state": "PB",
+                    "delivered_orders": 586,
+                    "avg_delivery_days": 20.6,
+                    "avg_estimated_days": 33.0,
+                    "delayed_shipments": 66,
+                    "state_delay_rate_pct": 11.26,
+                    "avg_freight_cost": 43.09
+                },
+                {
+                    "customer_state": "RO",
+                    "delivered_orders": 273,
+                    "avg_delivery_days": 19.7,
+                    "avg_estimated_days": 39.1,
+                    "delayed_shipments": 11,
+                    "state_delay_rate_pct": 4.03,
+                    "avg_freight_cost": 41.33
+                },
+                {
+                    "customer_state": "PI",
+                    "delivered_orders": 523,
+                    "avg_delivery_days": 19.4,
+                    "avg_estimated_days": 30.2,
+                    "delayed_shipments": 81,
+                    "state_delay_rate_pct": 15.49,
+                    "avg_freight_cost": 39.12
+                },
+                {
+                    "customer_state": "RN",
+                    "delivered_orders": 521,
+                    "avg_delivery_days": 19.3,
+                    "avg_estimated_days": 32.6,
+                    "delayed_shipments": 54,
+                    "state_delay_rate_pct": 10.36,
+                    "avg_freight_cost": 35.72
+                },
+                {
+                    "customer_state": "BA",
+                    "delivered_orders": 3683,
+                    "avg_delivery_days": 19.2,
+                    "avg_estimated_days": 29.5,
+                    "delayed_shipments": 504,
+                    "state_delay_rate_pct": 13.68,
+                    "avg_freight_cost": 26.49
+                },
+                {
+                    "customer_state": "PE",
+                    "delivered_orders": 1746,
+                    "avg_delivery_days": 18.3,
+                    "avg_estimated_days": 31.0,
+                    "delayed_shipments": 178,
+                    "state_delay_rate_pct": 10.19,
+                    "avg_freight_cost": 32.69
+                },
+                {
+                    "customer_state": "MT",
+                    "delivered_orders": 1037,
+                    "avg_delivery_days": 18.0,
+                    "avg_estimated_days": 31.9,
+                    "delayed_shipments": 70,
+                    "state_delay_rate_pct": 6.75,
+                    "avg_freight_cost": 28.0
+                },
+                {
+                    "customer_state": "TO",
+                    "delivered_orders": 310,
+                    "avg_delivery_days": 17.4,
+                    "avg_estimated_days": 29.1,
+                    "delayed_shipments": 38,
+                    "state_delay_rate_pct": 12.26,
+                    "avg_freight_cost": 37.44
+                },
+                {
+                    "customer_state": "ES",
+                    "delivered_orders": 2225,
+                    "avg_delivery_days": 15.6,
+                    "avg_estimated_days": 25.6,
+                    "delayed_shipments": 272,
+                    "state_delay_rate_pct": 12.22,
+                    "avg_freight_cost": 22.03
+                },
+                {
+                    "customer_state": "MS",
+                    "delivered_orders": 811,
+                    "avg_delivery_days": 15.5,
+                    "avg_estimated_days": 26.1,
+                    "delayed_shipments": 88,
+                    "state_delay_rate_pct": 10.85,
+                    "avg_freight_cost": 23.35
+                },
+                {
+                    "customer_state": "GO",
+                    "delivered_orders": 2277,
+                    "avg_delivery_days": 15.4,
+                    "avg_estimated_days": 27.0,
+                    "delayed_shipments": 179,
+                    "state_delay_rate_pct": 7.86,
+                    "avg_freight_cost": 22.56
+                },
+                {
+                    "customer_state": "RS",
+                    "delivered_orders": 6133,
+                    "avg_delivery_days": 15.2,
+                    "avg_estimated_days": 28.6,
+                    "delayed_shipments": 422,
+                    "state_delay_rate_pct": 6.88,
+                    "avg_freight_cost": 21.61
+                },
+                {
+                    "customer_state": "RJ",
+                    "delivered_orders": 14143,
+                    "avg_delivery_days": 15.1,
+                    "avg_estimated_days": 26.5,
+                    "delayed_shipments": 1835,
+                    "state_delay_rate_pct": 12.97,
+                    "avg_freight_cost": 20.91
+                },
+                {
+                    "customer_state": "SC",
+                    "delivered_orders": 4097,
+                    "avg_delivery_days": 15.0,
+                    "avg_estimated_days": 25.9,
+                    "delayed_shipments": 394,
+                    "state_delay_rate_pct": 9.62,
+                    "avg_freight_cost": 21.51
+                },
+                {
+                    "customer_state": "DF",
+                    "delivered_orders": 2355,
+                    "avg_delivery_days": 13.0,
+                    "avg_estimated_days": 24.5,
+                    "delayed_shipments": 175,
+                    "state_delay_rate_pct": 7.43,
+                    "avg_freight_cost": 21.07
+                },
+                {
+                    "customer_state": "MG",
+                    "delivered_orders": 12916,
+                    "avg_delivery_days": 12.0,
+                    "avg_estimated_days": 24.6,
+                    "delayed_shipments": 703,
+                    "state_delay_rate_pct": 5.44,
+                    "avg_freight_cost": 20.63
+                },
+                {
+                    "customer_state": "PR",
+                    "delivered_orders": 5649,
+                    "avg_delivery_days": 11.9,
+                    "avg_estimated_days": 24.7,
+                    "delayed_shipments": 270,
+                    "state_delay_rate_pct": 4.78,
+                    "avg_freight_cost": 20.47
+                },
+                {
+                    "customer_state": "SP",
+                    "delivered_orders": 46441,
+                    "avg_delivery_days": 8.7,
+                    "avg_estimated_days": 19.2,
+                    "delayed_shipments": 2679,
+                    "state_delay_rate_pct": 5.77,
+                    "avg_freight_cost": 15.11
+                }
+            ]
+        },
+        {
+            "query_index": 3,
+            "rows_returned": 2,
+            "data": [
+                {
+                    "route_type": "Inter-State (Different State)",
+                    "total_orders": 61895,
+                    "avg_delivery_days": 15.0,
+                    "avg_freight_cost": 23.63,
+                    "delay_rate_pct": 10.23
+                },
+                {
+                    "route_type": "Intra-State (Same State)",
+                    "total_orders": 34822,
+                    "avg_delivery_days": 7.9,
+                    "avg_freight_cost": 13.45,
+                    "delay_rate_pct": 6.85
+                }
+            ]
+        }
+    ],
+    "05_customer_reviews.sql": [
+        {
+            "query_index": 1,
+            "rows_returned": 5,
+            "data": [
+                {
+                    "review_score": 5,
+                    "total_reviews": 57328,
+                    "pct_of_reviews": 57.78,
+                    "comments_with_text": 20535,
+                    "avg_response_hours": 77.0
+                },
+                {
+                    "review_score": 4,
+                    "total_reviews": 19142,
+                    "pct_of_reviews": 19.29,
+                    "comments_with_text": 5970,
+                    "avg_response_hours": 74.9
+                },
+                {
+                    "review_score": 3,
+                    "total_reviews": 8179,
+                    "pct_of_reviews": 8.24,
+                    "comments_with_text": 3556,
+                    "avg_response_hours": 71.5
+                },
+                {
+                    "review_score": 2,
+                    "total_reviews": 3151,
+                    "pct_of_reviews": 3.18,
+                    "comments_with_text": 2145,
+                    "avg_response_hours": 72.1
+                },
+                {
+                    "review_score": 1,
+                    "total_reviews": 11424,
+                    "pct_of_reviews": 11.51,
+                    "comments_with_text": 8744,
+                    "avg_response_hours": 73.2
+                }
+            ]
+        },
+        {
+            "query_index": 2,
+            "rows_returned": 2,
+            "data": [
+                {
+                    "delivery_performance": "On-Time / Early Delivery",
+                    "total_reviews": 88661,
+                    "average_review_score": 4.29,
+                    "pct_1_star_reviews": 6.6,
+                    "pct_5_star_reviews": 62.43
+                },
+                {
+                    "delivery_performance": "Delayed Delivery (Past SLA)",
+                    "total_reviews": 7700,
+                    "average_review_score": 2.57,
+                    "pct_1_star_reviews": 46.16,
+                    "pct_5_star_reviews": 22.22
+                }
+            ]
+        },
+        {
+            "query_index": 3,
+            "rows_returned": 10,
+            "data": [
+                {
+                    "category": "Office Furniture",
+                    "review_count": 1687,
+                    "average_score": 3.49,
+                    "pct_negative_reviews": 26.08,
+                    "avg_delivery_days": 20.8
+                },
+                {
+                    "category": "Fashion Male Clothing",
+                    "review_count": 131,
+                    "average_score": 3.64,
+                    "pct_negative_reviews": 28.24,
+                    "avg_delivery_days": 12.8
+                },
+                {
+                    "category": "Fixed Telephony",
+                    "review_count": 262,
+                    "average_score": 3.68,
+                    "pct_negative_reviews": 25.57,
+                    "avg_delivery_days": 12.6
+                },
+                {
+                    "category": "Audio",
+                    "review_count": 361,
+                    "average_score": 3.83,
+                    "pct_negative_reviews": 21.88,
+                    "avg_delivery_days": 13.3
+                },
+                {
+                    "category": "Home Confort",
+                    "review_count": 435,
+                    "average_score": 3.83,
+                    "pct_negative_reviews": 20.23,
+                    "avg_delivery_days": 13.5
+                },
+                {
+                    "category": "Construction Tools Safety",
+                    "review_count": 193,
+                    "average_score": 3.84,
+                    "pct_negative_reviews": 20.21,
+                    "avg_delivery_days": 11.9
+                },
+                {
+                    "category": "Other Unknown",
+                    "review_count": 1598,
+                    "average_score": 3.84,
+                    "pct_negative_reviews": 22.09,
+                    "avg_delivery_days": 12.8
+                },
+                {
+                    "category": "Bed Bath Table",
+                    "review_count": 11137,
+                    "average_score": 3.9,
+                    "pct_negative_reviews": 18.96,
+                    "avg_delivery_days": 12.8
+                },
+                {
+                    "category": "Furniture Decor",
+                    "review_count": 8331,
+                    "average_score": 3.9,
+                    "pct_negative_reviews": 19.46,
+                    "avg_delivery_days": 12.8
+                },
+                {
+                    "category": "Furniture Living Room",
+                    "review_count": 502,
+                    "average_score": 3.9,
+                    "pct_negative_reviews": 18.13,
+                    "avg_delivery_days": 13.8
+                }
+            ]
+        },
+        {
+            "query_index": 4,
+            "rows_returned": 10,
+            "data": [
+                {
+                    "category": "Books General Interest",
+                    "review_count": 549,
+                    "average_score": 4.45,
+                    "pct_positive_reviews": 87.8
+                },
+                {
+                    "category": "Books Technical",
+                    "review_count": 266,
+                    "average_score": 4.37,
+                    "pct_positive_reviews": 85.34
+                },
+                {
+                    "category": "Luggage Accessories",
+                    "review_count": 1088,
+                    "average_score": 4.32,
+                    "pct_positive_reviews": 83.73
+                },
+                {
+                    "category": "Food Drink",
+                    "review_count": 279,
+                    "average_score": 4.32,
+                    "pct_positive_reviews": 81.72
+                },
+                {
+                    "category": "Fashion Shoes",
+                    "review_count": 261,
+                    "average_score": 4.23,
+                    "pct_positive_reviews": 80.84
+                },
+                {
+                    "category": "Food",
+                    "review_count": 495,
+                    "average_score": 4.22,
+                    "pct_positive_reviews": 81.82
+                },
+                {
+                    "category": "Stationery",
+                    "review_count": 2507,
+                    "average_score": 4.19,
+                    "pct_positive_reviews": 80.73
+                },
+                {
+                    "category": "Pet Shop",
+                    "review_count": 1939,
+                    "average_score": 4.19,
+                    "pct_positive_reviews": 79.68
+                },
+                {
+                    "category": "Computers",
+                    "review_count": 200,
+                    "average_score": 4.18,
+                    "pct_positive_reviews": 81.5
+                },
+                {
+                    "category": "Home Appliances",
+                    "review_count": 806,
+                    "average_score": 4.17,
+                    "pct_positive_reviews": 79.9
+                }
+            ]
+        }
+    ]
+}

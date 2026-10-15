@@ -1,0 +1,3 @@
+"""
+Shoplytics Test Suite
+"""
