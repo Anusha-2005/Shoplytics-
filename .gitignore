@@ -46,3 +46,11 @@ Thumbs.db
 # Power BI temp files
 *.pbix
 !power_bi/README.md
+
+# Node / Frontend artifacts
+node_modules/
+dist/
+dist-ssr/
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
