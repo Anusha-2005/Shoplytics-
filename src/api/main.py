@@ -7,7 +7,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from src.api.routers import health, sales, logistics, customers, products, reviews, analytics
+from src.api.routers import health, sales, logistics, customers, products, reviews, analytics, geo
 
 app = FastAPI(
     title="Shoplytics — E-Commerce Analytics & Business Intelligence API",
@@ -23,6 +23,7 @@ High-performance REST API engineered to serve real-time e-commerce analytics, au
 - 👥 **Customer & RFM**: 11-segment RFM cluster analysis, buyer loyalty cohorts, and individual customer lookups.
 - 📦 **Products & Catalog**: Top revenue categories, 80/20 Pareto distribution, and dimensional weight tiers.
 - ⭐ **Reviews & Sentiment**: Rating distributions, seller response times, and late delivery root-cause impact.
+- 🗺️ **Geographic Analysis**: State and regional level rollup of revenue, order density, and customer distribution.
     """,
     version="1.0.0",
     docs_url="/docs",
@@ -46,6 +47,8 @@ app.include_router(customers.router, prefix="/api/v1")
 app.include_router(products.router, prefix="/api/v1")
 app.include_router(reviews.router, prefix="/api/v1")
 app.include_router(analytics.router, prefix="/api/v1")
+app.include_router(geo.router, prefix="/api/v1")
+
 
 @app.get("/", tags=["Root"])
 def root_metadata():

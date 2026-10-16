@@ -189,3 +189,88 @@ def test_custom_query_forbidden_statements(client):
     for req in forbidden:
         res = client.post("/api/v1/analytics/query", json=req)
         assert res.status_code == 400
+
+def test_filter_options(client):
+    """Verify global filter options endpoint."""
+    response = client.get("/api/v1/analytics/filter-options")
+    assert response.status_code == 200
+    data = response.json()
+    assert len(data["available_categories"]) > 50
+    assert len(data["available_states"]) == 27
+    assert "delivered" in data["available_statuses"]
+    assert "2016" in data["min_date"]
+    assert "2018" in data["max_date"]
+
+def test_product_table(client):
+    """Verify paginated product table endpoint."""
+    response = client.get("/api/v1/products/table?page=1&page_size=10&sort_by=total_revenue&order=desc")
+    assert response.status_code == 200
+    data = response.json()
+    assert data["page"] == 1
+    assert data["page_size"] == 10
+    assert len(data["items"]) == 10
+    assert data["total_items"] > 30000
+    assert data["items"][0]["total_revenue"] >= data["items"][1]["total_revenue"]
+
+def test_customer_cohorts(client):
+    """Verify customer monthly cohort retention analysis."""
+    response = client.get("/api/v1/customers/cohorts")
+    assert response.status_code == 200
+    data = response.json()
+    assert len(data) >= 12
+    assert "M+0" in data[0]["retention_rates"]
+    assert data[0]["retention_rates"]["M+0"] == 100.0
+
+def test_regional_logistics(client):
+    """Verify macro-region logistics rollup."""
+    response = client.get("/api/v1/logistics/regional-performance")
+    assert response.status_code == 200
+    data = response.json()
+    assert len(data) == 5
+    regions = [r["region"] for r in data]
+    assert "Southeast" in regions
+    assert "South" in regions
+
+def test_reviews_score_vs_leadtime(client):
+    """Verify review score correlation with lead time buckets."""
+    response = client.get("/api/v1/reviews/score-vs-leadtime")
+    assert response.status_code == 200
+    data = response.json()
+    assert len(data) == 5
+    # Fast deliveries should have higher average score than late ones
+    assert data[0]["avg_review_score"] > data[3]["avg_review_score"]
+
+def test_geo_summary(client):
+    """Verify geographic state and regional metrics summary."""
+    response = client.get("/api/v1/geo/summary")
+    assert response.status_code == 200
+    data = response.json()
+    assert len(data) == 27
+    assert data[0]["state"] == "SP"
+    assert data[0]["region"] == "Southeast"
+
+def test_data_quality_audit(client):
+    """Verify full data hygiene and referential integrity audit endpoint."""
+    response = client.get("/api/v1/health/quality-audit")
+    assert response.status_code == 200
+    data = response.json()
+    assert data["status"] == "verified"
+    assert data["duplicate_key_audit"]["fact_orders_order_id_duplicates"] == 0
+    assert "PASSED" in data["referential_integrity_audit"]["orders_to_customers_foreign_key"]
+
+def test_daily_trends(client):
+    """Verify daily sales trends endpoint."""
+    response = client.get("/api/v1/sales/daily-trends?limit=30")
+    assert response.status_code == 200
+    data = response.json()
+    assert len(data) <= 30
+    assert "date" in data[0]
+
+def test_status_breakdown(client):
+    """Verify order fulfillment status breakdown."""
+    response = client.get("/api/v1/sales/status-breakdown")
+    assert response.status_code == 200
+    data = response.json()
+    delivered = next(s for s in data if s["order_status"] == "delivered")
+    assert delivered["percentage"] > 95.0
+

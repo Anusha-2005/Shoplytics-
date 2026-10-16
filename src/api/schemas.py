@@ -16,6 +16,26 @@ class HealthResponse(BaseModel):
     timestamp: str = Field(..., description="UTC ISO timestamp of health check")
     table_row_counts: Dict[str, int] = Field(..., description="Row counts per table in the star schema")
 
+class DataQualityAuditResponse(BaseModel):
+    status: str
+    database_engine: str
+    historical_period: Dict[str, str]
+    table_row_counts: Dict[str, int]
+    missing_values_audit: Dict[str, Dict[str, int]]
+    duplicate_key_audit: Dict[str, int]
+    referential_integrity_audit: Dict[str, str]
+    pipeline_status: str
+
+# =============================================================================
+# Filter Options Schema
+# =============================================================================
+
+class FilterOptionsResponse(BaseModel):
+    available_categories: List[str]
+    available_states: List[str]
+    available_statuses: List[str]
+    min_date: str
+    max_date: str
 
 # =============================================================================
 # Sales Domain Schemas
@@ -39,6 +59,17 @@ class MonthlyTrendItem(BaseModel):
     prev_month_revenue: Optional[float] = None
     mom_revenue_growth_pct: Optional[float] = None
 
+class DailyTrendItem(BaseModel):
+    date: str
+    daily_orders: int
+    daily_revenue: float
+    daily_freight: float
+
+class OrderStatusItem(BaseModel):
+    order_status: str
+    order_count: int
+    percentage: float
+
 class PaymentMethodItem(BaseModel):
     payment_type: str
     total_orders: int
@@ -53,7 +84,6 @@ class HourlyPatternItem(BaseModel):
     purchase_hour: int
     orders_count: int
     total_revenue: float
-
 
 # =============================================================================
 # Logistics Domain Schemas
@@ -78,13 +108,21 @@ class StateLogisticsItem(BaseModel):
     state_delay_rate_pct: float
     avg_freight_cost: float
 
+class RegionalLogisticsItem(BaseModel):
+    region: str
+    state_count: int
+    delivered_orders: int
+    avg_delivery_days: float
+    avg_estimated_days: float
+    delay_rate_pct: float
+    avg_freight_cost: float
+
 class RouteTypeItem(BaseModel):
     route_type: str
     total_orders: int
     avg_delivery_days: float
     avg_freight_cost: float
     delay_rate_pct: float
-
 
 # =============================================================================
 # Customer & RFM Domain Schemas
@@ -138,6 +176,17 @@ class CustomerDetailResponse(BaseModel):
     profile: CustomerRFMProfile
     orders: List[CustomerOrderDetail]
 
+class CohortRetentionItem(BaseModel):
+    cohort_month: str
+    cohort_size: int
+    retention_rates: Dict[str, float]
+
+class CustomerReviewPatternItem(BaseModel):
+    customer_segment: str
+    avg_review_score: float
+    review_count: int
+    pct_positive: float
+    pct_negative: float
 
 # =============================================================================
 # Products & Categories Schemas
@@ -165,6 +214,22 @@ class WeightTierItem(BaseModel):
     avg_freight_charge: float
     avg_freight_to_price_ratio_pct: float
 
+class ProductTableItem(BaseModel):
+    product_id: str
+    category: str
+    units_sold: int
+    total_revenue: float
+    avg_price: float
+    avg_freight: float
+    product_weight_g: Optional[float] = None
+    product_volume_cm3: Optional[float] = None
+
+class PaginatedProductsResponse(BaseModel):
+    total_items: int
+    page: int
+    page_size: int
+    total_pages: int
+    items: List[ProductTableItem]
 
 # =============================================================================
 # Customer Reviews Schemas
@@ -192,6 +257,27 @@ class CategoryRatingItem(BaseModel):
     pct_positive_reviews: Optional[float] = None
     avg_delivery_days: Optional[float] = None
 
+class LeadTimeReviewItem(BaseModel):
+    lead_time_bucket: str
+    order_count: int
+    avg_review_score: float
+    pct_1_star: float
+    pct_5_star: float
+
+# =============================================================================
+# Geographic Schemas
+# =============================================================================
+
+class GeographicSummaryItem(BaseModel):
+    state: str
+    region: str
+    orders_count: int
+    unique_customers: int
+    total_revenue: float
+    avg_order_value: float
+    avg_delivery_days: float
+    delay_rate_pct: float
+    avg_freight: float
 
 # =============================================================================
 # Executive KPI Summary Schema
